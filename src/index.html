@@ -3,14 +3,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/style.css" />
-		<title>Doa Sehari Hari</title>
+		<title>Doa Harian</title>
 	</head>
-	<body>
-		<section id="prayerTitle" class="container flex justify-between">
-			<h2 class="title">Semua Doa</h2>
-		</section>
-		<section id="prayerName" class="container"></section>
+	<body class="bg-body-tertiary">
+		<nav class="container text-center bg-primary text-white py-4 mb-4">
+			<h2 class="h2 fw-bolder">Selamat Datang!</h2>
+			<p>Jangan Lupa Berdoa!</p>
+		</nav>
+		<main class="container">
+			<prayer-list class="d-flex flex-column gap-4"></prayer-list>
+		</main>
+		<footer class="container w-50 text-center py-4 border-top mt-4">©Denjay - Submission Web Fundamental Dicoding</footer>
 		<script src="index.js" type="module"></script>
 	</body>
 </html>
