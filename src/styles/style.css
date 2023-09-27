@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff6f0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.text-black {
+  background: transparent;
+  color: black;
+}
+
+.prayerCard {
+  margin-bottom: 4px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: white;
+  transition: ease-out;
+}
+
+.prayerCard:hover {
+  background-color: #ffebde;
+  transition-duration: .3s;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
