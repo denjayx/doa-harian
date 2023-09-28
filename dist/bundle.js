@@ -397,13 +397,13 @@ class PrayerItem extends HTMLElement {
         this.innerHTML = `
       <div id="prayerItem" class="card">
 					<div class="card-header text-capitalize d-flex justify-content-between fs-6">
-						<span class="fw-bold fs-5">${this._prayer.doa}</span>
+						<span class="fw-bold fs-5">${this._prayer.title}</span>
 					</div>
 					<div class="card-body">
 						<blockquote class="blockquote mb-0">
-							<p class="fs-2">${this._prayer.ayat}</p>
+							<p class="fs-2">${this._prayer.arabic}</p>
 							<span class="blockquote-footer"><cite title="Latin">${this._prayer.latin}</cite></span>
-							<footer class=""><cite title="Latin">${this._prayer.artinya}</cite></footer>
+							<footer class=""><cite title="Latin">${this._prayer.translation}</cite></footer>
 						</blockquote>
 					</div>
       </div>
@@ -3987,7 +3987,7 @@ axios.default = axios;
 /* harmony default export */ const lib_axios = (axios);
 
 ;// CONCATENATED MODULE: ./src/utils/constanta.js
-const BASE_URL = 'https://doa-doa-api-ahmadramadhan.fly.dev/api/';
+const BASE_URL = 'https://islamic-api-zhirrr.vercel.app/api/doaharian';
 ;// CONCATENATED MODULE: ./src/script/main.js
 
 
@@ -3997,8 +3997,8 @@ function main() {
     const prayerListElement = document.querySelector('prayer-list');
     const getPrayer = async () => {
         try {
-            const response = await lib_axios.get(BASE_URL);
-            const data = await response.data;
+            const response = await lib_axios.get(BASE_URL, 'Access-Control-Allow-Origin: *');
+            const data = await response.data.data;
             if (!response.status) {
                 alert('Gagal memuat data');
             } else {
