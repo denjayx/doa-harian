@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://islamic-api-zhirrr.vercel.app/api/doaharian';
