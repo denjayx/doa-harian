@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://doa-doa-api-ahmadramadhan.fly.dev/api/';

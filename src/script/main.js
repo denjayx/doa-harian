@@ -1,28 +1,28 @@
-import "../components/prayer-list.js";
-const axios = require("axios");
+import '../components/prayer-list';
+import axios from 'axios';
+import { BASE_URL } from '../utils/constanta';
 
 function main() {
-	const prayerListElement = document.querySelector("prayer-list");
-	const baseUrl = "https://doa-doa-api-ahmadramadhan.fly.dev/api/";
-	const getPrayer = async () => {
-		try {
-			const response = await axios.get(baseUrl);
-			const data = await response.data;
-			if (!response.status) {
-				console.log("Gagal memuat data");
-			} else {
-				renderPrayers(data);
-			}
-		} catch (error) {
-			console.log(error);
-		}
-	};
+    const prayerListElement = document.querySelector('prayer-list');
+    const getPrayer = async () => {
+        try {
+            const response = await axios.get(BASE_URL);
+            const data = await response.data;
+            if (!response.status) {
+                alert('Gagal memuat data');
+            } else {
+                renderPrayers(data);
+            }
+        } catch (error) {
+            alert(error);
+        }
+    };
 
-	const renderPrayers = (data) => {
-		prayerListElement.prayers = data;
-	};
+    const renderPrayers = (data) => {
+        prayerListElement.prayers = data;
+    };
 
-	getPrayer();
+    getPrayer();
 }
 
 export default main;

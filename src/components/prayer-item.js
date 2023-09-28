@@ -1,10 +1,11 @@
 class PrayerItem extends HTMLElement {
-	set prayer(prayer) {
-		this._prayer = prayer;
-		this.render();
-	}
-	render() {
-		this.innerHTML = `
+    set prayer(prayer) {
+        this._prayer = prayer;
+        this.render();
+    }
+
+    render() {
+        this.innerHTML = `
       <div id="prayerItem" class="card">
 					<div class="card-header text-capitalize d-flex justify-content-between fs-6">
 						<span class="fw-bold fs-5">${this._prayer.doa}</span>
@@ -18,7 +19,7 @@ class PrayerItem extends HTMLElement {
 					</div>
       </div>
     `;
-	}
+    }
 }
 
-customElements.define("prayer-item", PrayerItem);
+customElements.define('prayer-item', PrayerItem);
