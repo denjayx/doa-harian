@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://doa-doa-api-ahmadramadhan.fly.dev/api/';
+export const BASE_URL = 'https://islamic-api-zhirrr.vercel.app/api/doaharian';
